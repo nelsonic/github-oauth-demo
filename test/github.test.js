@@ -3,7 +3,7 @@ var nock = require('nock');
 var dir  = __dirname.split('/')[__dirname.split('/').length-1];
 var file = dir + __filename.replace(__dirname, '') + " > ";
 
-var server = require('../example/github_server.js');
+var server = require('../server.js');
 
 test(file+'Visit / root url expect to see a link', function(t) {
   var options = {
@@ -12,6 +12,17 @@ test(file+'Visit / root url expect to see a link', function(t) {
   };
   server.inject(options, function(response) {
     t.equal(response.statusCode, 200, "Server is working.");
+    setTimeout(function(){ server.stop(t.end); }, 100);
+  });
+});
+
+test(file+'Visit / root url expect to see a link', function(t) {
+  var options = {
+    method: "GET",
+    url: "/favicon.ico"
+  };
+  server.inject(options, function(response) {
+    t.equal(response.statusCode, 302, "Server is working.");
     setTimeout(function(){ server.stop(t.end); }, 100);
   });
 });

@@ -10,11 +10,11 @@ server.connection({
 });
 
 var opts = {
-  handler: require('./github_oauth_handler.js'), // your handler
+  handler: require('./lib/github_oauth_handler.js'), // your handler
   SCOPE: 'user' // get user's profile see: developer.github.com/v3/oauth/#scopes
 };
 
-var hapi_auth_github = require('../lib');
+var hapi_auth_github = require('hapi-auth-github');
 
 server.register([
 	{ register: hapi_auth_github, options:opts },

@@ -1,8 +1,7 @@
 {
-  "name": "hapi-auth-github",
+  "name": "ithub-oauth-demo",
   "version": "2.0.0",
-  "description": "Quick & Simple GitHub Authentication for Hapi.js apps",
-  "main": "lib/index.js",
+  "description": "Quick Demo of using hapi-auth-github",
   "directories": {
     "example": "example",
     "test": "test"
@@ -17,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dwyl/hapi-auth-github.git"
+    "url": "github.com/nelsonic/github-oauth-demo.git"
   },
   "keywords": [
     "GitHub",
@@ -32,9 +31,9 @@
   "author": "@rjmk & @nelsonic @dwyl",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/dwyl/hapi-auth-github/issues"
+    "url": "https://github.com/nelsonic/github-oauth-demo/issues"
   },
-  "homepage": "https://github.com/dwyl/hapi-auth-github#readme",
+  "homepage": "https://github.com/nelsonic/github-oauth-demo/issues",
   "devDependencies": {
     "goodparts": "^1.1.1",
     "hoek": "^4.1.0",
@@ -53,6 +52,7 @@
   "dependencies": {
     "env2": "^2.2.0",
     "hapi": "^15.2.0",
+    "hapi-auth-github": "^2.0.0",
     "inert": "^4.2.1",
     "jsonwebtoken": "^8.0.1"
   }
