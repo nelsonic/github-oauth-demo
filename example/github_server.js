@@ -16,7 +16,10 @@ var opts = {
 
 var hapi_auth_github = require('../lib');
 
-server.register([{ register: hapi_auth_github, options:opts }], function (err) {
+server.register([
+	{ register: hapi_auth_github, options:opts },
+	require('inert'),  // serve static content
+], function (err) {
   // handle the error if the plugin failed to load:
   assert(!err, "FAILED TO LOAD PLUGIN!!! :-("); // fatal error
 });

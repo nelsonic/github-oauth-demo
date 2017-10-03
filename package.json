@@ -38,7 +38,6 @@
   "devDependencies": {
     "env2": "^2.1.1",
     "goodparts": "^1.1.1",
-    "hapi": "^15.1.1",
     "hoek": "^4.1.0",
     "istanbul": "^0.4.5",
     "jsonwebtoken": "^7.1.9",
@@ -52,5 +51,9 @@
   "pre-commit": [
     "lint",
     "coverage"
-  ]
+  ],
+  "dependencies": {
+    "hapi": "^15.2.0",
+    "inert": "^4.2.1"
+  }
 }
