@@ -36,6 +36,16 @@ server.route({
   }
 });
 
+server.route({
+	method: 'GET',
+	path: '/favicon.ico',
+	handler: function(req, reply) {
+		// console.log(req.url);
+		var uri = 'http://dwyl.com/img/favicon.ico';
+		reply().redirect(uri)
+	}
+})
+
 server.start(function(err){ // boots your server
   assert(!err, "FAILED TO Start Server");
 	console.log('Now Visit: http://localhost:'+server.info.port);
