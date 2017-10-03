@@ -11,8 +11,8 @@
     "lint": "node_modules/.bin/goodparts lib/",
     "spec": "node ./node_modules/tape/bin/tape ./test/*.test.js | node_modules/tap-spec/bin/cmd.js",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.test.js",
-    "dev": "PORT=8000 node_modules/.bin/nodemon example/github_server.js",
-    "start": "node example/github_server.js"
+    "dev": "PORT=8000 node_modules/.bin/nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
